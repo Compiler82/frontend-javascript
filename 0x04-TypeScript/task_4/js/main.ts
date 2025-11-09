@@ -1,12 +1,18 @@
 /// <reference path="subjects/Cpp.ts" />
 /// <reference path="subjects/Java.ts" />
 /// <reference path="subjects/React.ts" />
+/// <reference path="subjects/Teacher.ts" />
 
-export const cpp = new Subjects.Cpp();
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
+import { Cpp } from './subjects/Cpp';
+import { Java } from './subjects/Java';
+import { React } from './subjects/React';
+import { Teacher } from './subjects/Teacher';
 
-export const cTeacher: Subjects.Teacher = {
+const cpp = new Cpp();
+const java = new Java();
+const react = new React();
+
+const cTeacher: Teacher = {
   firstName: 'John',
   lastName: 'Doe',
   experienceTeachingC: 10,
@@ -26,3 +32,5 @@ console.log('React');
 react.setTeacher(cTeacher);
 console.log(react.getRequirements());
 console.log(react.getAvailableTeacher());
+
+export { cpp, java, react, cTeacher };
